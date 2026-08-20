@@ -20,15 +20,14 @@
             --card-bg: rgba(255, 255, 255, 0.95);
             --text-main: #0f172a;
             --text-muted: #64748b;
-            --visitor-color: #0284c7; /* Sky Blue */
-            --staff-color: #059669;   /* Emerald Green */
-            --admin-color: #7c3aed;   /* Violet */
+            --visitor-color: #0284c7; 
+            --staff-color: #059669;   
+            --admin-color: #7c3aed;   
             --success: #10b981;
             --danger: #ef4444;
             --border-color: #e2e8f0;
             --input-bg: #ffffff;
             --input-border: #cbd5e1;
-            --glow-intensity: 0px;
         }
 
         body.dark-mode {
@@ -75,12 +74,12 @@
         }
 
         body.dark-mode::before {
-            background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='2.5' result='b'/%3E%3CfeMerge%3E%3CfeMergeNode in='b'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3Cg filter='url(%23g)' fill='none' stroke='%2300f0ff' stroke-width='1.5' stroke-opacity='0.6'%3E%3Ccircle cx='60' cy='60' r='50'/%3E%3Ccircle cx='60' cy='60' r='40' stroke-dasharray='4 4'/%3E%3Cpath d='M60 10 C 75 35, 85 45, 60 60 C 35 45, 45 35, 60 10 Z' fill='%2300f0ff' fill-opacity='0.08'/%3E%3Cpath d='M60 110 C 75 85, 85 75, 60 60 C 35 75, 45 85, 60 110 Z' fill='%2300f0ff' fill-opacity='0.08'/%3E%3Cpath d='M10 60 C 35 75, 45 85, 60 60 C 45 35, 35 45, 10 60 Z' fill='%2300f0ff' fill-opacity='0.08'/%3E%3Cpath d='M110 60 C 85 75, 75 85, 60 60 C 75 35, 85 45, 110 60 Z' fill='%2300f0ff' fill-opacity='0.08'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.2;
+            background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='2.5' result='b'/%3E%3CfeMerge%3E%3CfeMergeNode in='b'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3Cg filter='url(%23g)' fill='none' stroke='%2300f0ff' stroke-width='1.5' stroke-opacity='0.9'%3E%3Ccircle cx='60' cy='60' r='50'/%3E%3Ccircle cx='60' cy='60' r='40' stroke-dasharray='4 4'/%3E%3Cpath d='M60 10 C 75 35, 85 45, 60 60 C 35 45, 45 35, 60 10 Z' fill='%2300f0ff' fill-opacity='0.15'/%3E%3Cpath d='M60 110 C 75 85, 85 75, 60 60 C 35 75, 45 85, 60 110 Z' fill='%2300f0ff' fill-opacity='0.15'/%3E%3Cpath d='M10 60 C 35 75, 45 85, 60 60 C 45 35, 35 45, 10 60 Z' fill='%2300f0ff' fill-opacity='0.15'/%3E%3Cpath d='M110 60 C 85 75, 75 85, 60 60 C 75 35, 85 45, 110 60 Z' fill='%2300f0ff' fill-opacity='0.15'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
         }
 
         /* =========================================
-           4. TOP NAVIGATION ICONS (Mobile Friendly)
+           4. TOP NAVIGATION ICONS
            ========================================= */
         .icon-btn {
             position: fixed; top: 15px; background: var(--card-bg); border: 1px solid var(--border-color);
@@ -123,7 +122,7 @@
         body.dark-mode .app-subtitle { color: #bae6fd; text-shadow: 0 0 5px var(--visitor-color), 0 0 10px rgba(0, 240, 255, 0.5); }
 
         /* =========================================
-           6. UI CARDS & PANELS (Glassmorphism)
+           6. UI CARDS & PANELS
            ========================================= */
         .home-grid { display: flex; flex-direction: column; gap: 16px; }
         
@@ -167,7 +166,7 @@
         }
 
         /* =========================================
-           7. FORMS, INPUTS & BUTTONS (Touch Optimized)
+           7. FORMS, INPUTS & BUTTONS
            ========================================= */
         input { 
             width: 100%; padding: 14px; margin: 8px 0 16px 0; border: 1px solid var(--input-border); 
@@ -179,6 +178,7 @@
         body.dark-mode input { border-color: #334155; }
         body.dark-mode input:focus { border-color: var(--visitor-color); box-shadow: 0 0 10px rgba(0, 240, 255, 0.2); }
 
+        .pin-input { text-align: center; font-size: 1.8rem; letter-spacing: 10px; font-weight: bold; }
         .password-container { position: relative; width: 100%; }
         .password-container input { padding-right: 50px; }
         .eye-btn {
@@ -239,23 +239,54 @@
         
         .list-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 5px; border-bottom: 1px solid var(--border-color); }
         .list-item:last-child { border-bottom: none; }
+        .scanned-by-text { color: var(--visitor-color); font-size: 0.8rem; margin-left: 8px; font-weight: bold; }
+        body.dark-mode .scanned-by-text { color: #00f0ff; }
 
         /* =========================================
-           9. FOOTER SECTION
+           9. FULL SCREEN WELCOME OVERLAY (SINGLE TAP)
+           ========================================= */
+        #welcomeOverlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-color); z-index: 2000;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+        }
+        #welcomeOverlay.active { opacity: 1; pointer-events: auto; }
+        
+        .welcome-content { text-align: center; padding: 20px; animation: scaleUp 0.5s ease-out; }
+        @keyframes scaleUp { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        
+        .welcome-title {
+            font-size: clamp(2.5rem, 10vw, 4.5rem); font-weight: 900; margin-bottom: 10px;
+            color: #4c1d95; /* Deep Violet for Light Mode */
+            font-family: 'Georgia', serif; letter-spacing: 2px;
+        }
+        .welcome-subtitle {
+            font-size: clamp(1.2rem, 5vw, 1.8rem); color: var(--text-muted); font-style: italic; margin-bottom: 30px;
+        }
+        .tap-continue { font-size: 0.9rem; color: var(--text-muted); opacity: 0.7; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
+
+        /* Dark Mode Violet Neon */
+        body.dark-mode #welcomeOverlay { background: rgba(5, 8, 20, 0.95); backdrop-filter: blur(10px); }
+        body.dark-mode .welcome-title {
+            color: #ffffff;
+            text-shadow: 0 0 10px #7c3aed, 0 0 20px #7c3aed, 0 0 40px #d900ff, 0 0 80px #d900ff;
+        }
+        body.dark-mode .welcome-subtitle { color: #e9d5ff; text-shadow: 0 0 8px #7c3aed; }
+
+        /* =========================================
+           10. FOOTER SECTION
            ========================================= */
         .app-footer {
-            width: 100%; max-width: 500px;
-            margin-top: auto; padding: 30px 15px 15px;
-            text-align: center; color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            z-index: 1;
+            width: 100%; max-width: 500px; margin-top: auto; padding: 30px 15px 15px;
+            text-align: center; color: var(--text-muted); border-top: 1px solid var(--border-color); z-index: 1;
         }
         body.dark-mode .app-footer { border-color: rgba(255, 255, 255, 0.05); }
 
         .about-tab {
             cursor: pointer; display: inline-block; font-weight: 700;
-            color: var(--visitor-color); margin-bottom: 15px; font-size: 1rem;
-            transition: all 0.3s;
+            color: var(--visitor-color); margin-bottom: 15px; font-size: 1rem; transition: all 0.3s;
         }
         .about-tab:hover { text-decoration: underline; }
         body.dark-mode .about-tab { color: #00f0ff; text-shadow: 0 0 8px rgba(0, 240, 255, 0.5); }
@@ -264,24 +295,39 @@
             background: var(--card-bg); border: 1px solid var(--border-color);
             padding: 15px; border-radius: 12px; margin-bottom: 20px;
             font-size: 0.95rem; color: var(--text-main); line-height: 1.5;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            animation: slideDown 0.3s ease-out forwards;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); animation: slideDown 0.3s ease-out forwards;
         }
-        body.dark-mode .about-content {
-            border-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 15px rgba(0, 240, 255, 0.05);
-        }
-
+        body.dark-mode .about-content { border-color: rgba(255, 255, 255, 0.1); box-shadow: 0 0 15px rgba(0, 240, 255, 0.05); }
         @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
         .copyright { font-size: 0.85rem; }
+        
+        /* Visitor Counter Styling */
+        .visitor-counter-box {
+            margin-top: 15px; padding: 10px; border-radius: 8px; font-weight: bold;
+            background: rgba(124, 58, 237, 0.1); border: 1px solid var(--admin-color);
+            color: var(--admin-color); display: inline-block;
+        }
+        body.dark-mode .visitor-counter-box {
+            color: #d900ff; text-shadow: 0 0 5px rgba(217,0,255,0.5);
+            box-shadow: 0 0 10px rgba(217,0,255,0.2);
+        }
     </style>
 </head>
 <body>
 
-<!-- SECRET ADMIN ICON (Top Left) -->
-<button class="icon-btn admin-toggle" onclick="switchView('view-admin')" title="Master Control Dashboard">🛡️</button>
-<!-- THEME ICON (Top Right) -->
+<!-- === FULL SCREEN WELCOME OVERLAY === -->
+<div id="welcomeOverlay" class="hidden" onclick="hideWelcomeScreen()">
+    <div class="welcome-content">
+        <h1 class="welcome-title">Welcome to IIA</h1>
+        <p class="welcome-subtitle">Thank you for joining us.</p>
+        <p class="tap-continue">(Tap anywhere to close)</p>
+    </div>
+</div>
+
+<!-- SECRET ADMIN ICON (Double Tap) -->
+<button class="icon-btn admin-toggle" onclick="handleAdminIconClick()" title="Info">🛡️</button>
+<!-- THEME ICON -->
 <button id="themeToggle" class="icon-btn theme-toggle" onclick="toggleTheme()" title="Toggle Day/Night Mode">🌙</button>
 
 <div class="container">
@@ -336,7 +382,7 @@
                         <button type="button" class="eye-btn" onclick="togglePassword('vSignupPass', this)">👁️</button>
                     </div>
                     <button type="submit" class="btn-visitor">Sign Up</button>
-                    <div id="vSignupError" class="status-msg msg-error hidden">Email already exists.</div>
+                    <div id="vSignupError" class="status-msg msg-error hidden"></div>
                     <div class="auth-toggle">Have an account? <span class="toggle-visitor" onclick="toggleAuth('visitor', 'login')">Log In</span></div>
                 </form>
             </div>
@@ -389,7 +435,7 @@
                         <button type="button" class="eye-btn" onclick="togglePassword('sSignupPass', this)">👁️</button>
                     </div>
                     <button type="submit" class="btn-staff">Register for Approval</button>
-                    <div id="sSignupError" class="status-msg msg-error hidden">Email already registered.</div>
+                    <div id="sSignupError" class="status-msg msg-error hidden"></div>
                     <div class="auth-toggle">Registered? <span class="toggle-staff" onclick="toggleAuth('staff', 'login')">Log In</span></div>
                 </form>
             </div>
@@ -439,8 +485,17 @@
                     <input type="password" id="aLoginPass" placeholder="Master Password">
                     <button type="button" class="eye-btn" onclick="togglePassword('aLoginPass', this)">👁️</button>
                 </div>
-                <button class="btn-admin" onclick="handleAdminLogin()">Access Master Control</button>
+                <button class="btn-admin" onclick="handleAdminLogin()">Next</button>
                 <div id="aLoginError" class="status-msg msg-error hidden">Access Denied</div>
+            </div>
+
+            <div id="admin2FASection" class="hidden">
+                <h3 style="text-align: center; color: var(--admin-color);">2-Step Verification</h3>
+                <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Enter the 6-digit Master Security PIN to continue.</p>
+                <input type="password" id="aLoginPin" class="pin-input" placeholder="••••••" maxlength="6" pattern="\d{6}" autocomplete="off">
+                <button class="btn-admin" onclick="verifyAdminPin()">Verify & Access</button>
+                <button class="back-btn" onclick="cancelAdminLogin()" style="margin-top: 15px; width: 100%; text-align: center;">Cancel Login</button>
+                <div id="aPinError" class="status-msg msg-error hidden">Invalid PIN Code</div>
             </div>
 
             <div id="adminDashboard" class="hidden">
@@ -500,10 +555,68 @@
         <strong>Inside Inspiration Academy</strong><br>
         -Founded by Biswajit Saha
     </div>
-    <div class="copyright">© Copyright by IIA ,2026</div>
+    
+    <!-- SECURE LIVE VISITOR COUNTER (Only visible to logged-in Admins) -->
+    <div id="footerVisitorCount" class="hidden">
+        <div class="visitor-counter-box">
+            📈 Registered Students: <span id="totalVisitorCount">0</span>
+        </div>
+    </div>
+    
+    <div class="copyright" style="margin-top: 15px;">© Copyright by IIA ,2026</div>
 </footer>
 
 <script>
+    // --- ICON CLICK LISTENER (Single = Welcome, Double = Master Admin) ---
+    let adminIconTimer = null;
+    function handleAdminIconClick() {
+        if (adminIconTimer === null) {
+            // First click: wait 300ms to see if a second click happens
+            adminIconTimer = setTimeout(() => {
+                adminIconTimer = null;
+                // Single Tap Action -> Show Welcome Overlay
+                document.getElementById('welcomeOverlay').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('welcomeOverlay').classList.add('active');
+                }, 10);
+            }, 300);
+        } else {
+            // Second click detected before timer finished!
+            clearTimeout(adminIconTimer);
+            adminIconTimer = null;
+            // Double Tap Action -> Open Master Admin
+            switchView('view-admin');
+        }
+    }
+
+    function hideWelcomeScreen() {
+        document.getElementById('welcomeOverlay').classList.remove('active');
+        setTimeout(() => {
+            document.getElementById('welcomeOverlay').classList.add('hidden');
+        }, 400); // Wait for transition to finish
+    }
+
+    // --- VISITOR COUNTER LOGIC ---
+    function updateFooterCounter() {
+        const counterDiv = document.getElementById('footerVisitorCount');
+        const countSpan = document.getElementById('totalVisitorCount');
+        
+        // Show counter ONLY if Master Admin is logged in, or a verified Staff is logged in
+        if (isAdminLoggedIn || (currentStaff && currentStaff.status === 'Approved')) {
+            countSpan.innerText = visitors.length;
+            counterDiv.classList.remove('hidden');
+        } else {
+            counterDiv.classList.add('hidden');
+        }
+    }
+
+    // --- REAL EMAIL VALIDATOR ---
+    function isValidEmailDomain(email) {
+        const allowedDomains = ['gmail.com', 'hotmail.com', 'yahoo.com', 'outlook.com', 'icloud.com', 'aol.com'];
+        const domain = email.split('@')[1];
+        return allowedDomains.includes(domain);
+    }
+
     // --- ABOUT TAB TOGGLE ---
     function toggleAbout() {
         const content = document.getElementById('aboutContent');
@@ -524,19 +637,16 @@
         
         doc.setFontSize(18);
         doc.text("TEACHERS DAY 2K26 - Master Event Report", 14, 20);
-        
         doc.setFontSize(12);
         
         doc.text("1. Present in Venue (Scanned & Verified)", 14, 30);
-        const presentData = tickets.filter(t => t.status === 'Used').map(t => [t.name, t.email, t.id]);
-        doc.autoTable({ startY: 35, head: [['Student Name', 'Email', 'Pass ID']], body: presentData });
-        
+        const presentData = tickets.filter(t => t.status === 'Used').map(t => [t.name, t.email, t.id, t.scannedBy || 'Master']);
+        doc.autoTable({ startY: 35, head: [['Student Name', 'Email', 'Pass ID', 'Verified By']], body: presentData });
         let finalY = doc.lastAutoTable.finalY || 35;
         
         doc.text("2. Active / Approved Passes (Not Scanned Yet)", 14, finalY + 15);
         const activeData = tickets.filter(t => t.status === 'Approved').map(t => [t.name, t.email, t.id]);
         doc.autoTable({ startY: finalY + 20, head: [['Student Name', 'Email', 'Pass ID']], body: activeData });
-        
         finalY = doc.lastAutoTable.finalY || finalY + 20;
 
         doc.text("3. Authorized Admins", 14, finalY + 15);
@@ -552,7 +662,6 @@
         if(html5QrCode) {
             html5QrCode.stop().then(() => { html5QrCode.clear(); }).catch(err => console.log(err));
         }
-        
         document.getElementById(resultElementId).classList.add('hidden');
         html5QrCode = new Html5Qrcode(readerElementId);
         
@@ -562,9 +671,7 @@
             document.getElementById(readerElementId).innerHTML = '<div style="color:#10b981; padding:40px 0; font-size:1.5rem; font-weight:bold; text-align:center;">✅ QR Detected! Processing...</div>';
             processScan(decodedText, resultElementId);
         }, 
-        (errorMessage) => {
-            // Background scanning parse
-        }).catch(err => {
+        (errorMessage) => {}).catch(err => {
             document.getElementById(resultElementId).innerText = "Camera access denied. Ensure you are on a secure (HTTPS) connection or use manual entry.";
             document.getElementById(resultElementId).classList.remove('hidden');
             document.getElementById(resultElementId).classList.add('msg-error');
@@ -588,6 +695,11 @@
             res.innerText = `⚠️ Alert: Pass Already Used! (${t.name})`; res.classList.add('msg-error');
         } else if (t.status === 'Approved') {
             t.status = 'Used'; 
+            
+            if (isAdminLoggedIn) { t.scannedBy = 'Master Admin'; } 
+            else if (currentStaff) { t.scannedBy = currentStaff.name; } 
+            else { t.scannedBy = 'System'; }
+
             res.innerHTML = `✅ VERIFIED<br><small>Entry granted for: ${t.name}</small>`; res.classList.add('msg-success');
             refreshDashboards();
         }
@@ -621,6 +733,7 @@
         if(currentVisitor) updateVisitorUI();
         if(currentStaff) updateStaffUI();
         if(isAdminLoggedIn) updateAdminUI();
+        updateFooterCounter();
     }
 
     let visitors = []; 
@@ -661,19 +774,38 @@
         } else if (role === 'admin') {
             isAdminLoggedIn = false;
             document.getElementById('adminDashboard').classList.add('hidden');
+            document.getElementById('admin2FASection').classList.add('hidden');
+            document.getElementById('aLoginUser').value = '';
+            document.getElementById('aLoginPass').value = '';
+            document.getElementById('aLoginPin').value = '';
             document.getElementById('adminAuthSection').classList.remove('hidden');
         }
+        updateFooterCounter();
     }
 
+    // --- STUDENT REGISTRATION ---
     document.getElementById('formVisitorSignup').addEventListener('submit', e => {
         e.preventDefault();
         const n = document.getElementById('vSignupName').value;
         const eMail = document.getElementById('vSignupEmail').value;
         const p = document.getElementById('vSignupPass').value;
-        if (visitors.find(v => v.email === eMail)) return document.getElementById('vSignupError').classList.remove('hidden');
+        
+        if (!isValidEmailDomain(eMail)) {
+            const err = document.getElementById('vSignupError');
+            err.innerText = "Please use a real email provider (e.g., @gmail.com, @yahoo.com)";
+            err.classList.remove('hidden'); return;
+        }
+        if (visitors.find(v => v.email === eMail)) {
+            const err = document.getElementById('vSignupError');
+            err.innerText = "Email already exists.";
+            err.classList.remove('hidden'); return;
+        }
+
         currentVisitor = { name: n, email: eMail, pass: p };
         visitors.push(currentVisitor);
         e.target.reset();
+        
+        updateFooterCounter(); // Update global counter silently
         showVisitorDashboard();
     });
 
@@ -724,12 +856,23 @@
         updateVisitorUI();
     }
 
+    // --- ADMIN AUTHENTICATION ---
     document.getElementById('formStaffSignup').addEventListener('submit', e => {
         e.preventDefault();
         const n = document.getElementById('sSignupName').value;
         const eMail = document.getElementById('sSignupEmail').value;
         const p = document.getElementById('sSignupPass').value;
-        if (staffMembers.find(s => s.email === eMail)) return document.getElementById('sSignupError').classList.remove('hidden');
+        
+        if (!isValidEmailDomain(eMail)) {
+            const err = document.getElementById('sSignupError');
+            err.innerText = "Please use a real email provider (e.g., @gmail.com, @yahoo.com)";
+            err.classList.remove('hidden'); return;
+        }
+        if (staffMembers.find(s => s.email === eMail)) {
+            const err = document.getElementById('sSignupError');
+            err.innerText = "Email already registered.";
+            err.classList.remove('hidden'); return;
+        }
         
         const newAdmin = { name: n, email: eMail, pass: p, status: 'Pending' };
         staffMembers.push(newAdmin);
@@ -745,9 +888,9 @@
         const u = staffMembers.find(s => s.email === eMail && s.pass === p);
         
         if (u && u.status === 'Approved') { 
-            currentStaff = u; 
-            e.target.reset(); 
+            currentStaff = u; e.target.reset(); 
             showStaffDashboard(); 
+            updateFooterCounter(); // Show counter on login
         } else { 
             document.getElementById('sLoginError').classList.remove('hidden'); 
         }
@@ -765,17 +908,40 @@
         renderTicketLists('staffPendingList', 'staffApprovedList');
     }
 
+    // --- MASTER ADMIN LOGIC ---
     function handleAdminLogin() {
         const u = document.getElementById('aLoginUser').value;
         const p = document.getElementById('aLoginPass').value;
         if(u === 'SsUuDdAaRrSsAaNn' && p === 'QWERTy@2026') {
-            isAdminLoggedIn = true;
             document.getElementById('adminAuthSection').classList.add('hidden');
-            document.getElementById('adminDashboard').classList.remove('hidden');
-            updateAdminUI();
+            document.getElementById('aLoginError').classList.add('hidden');
+            document.getElementById('admin2FASection').classList.remove('hidden');
         } else {
             document.getElementById('aLoginError').classList.remove('hidden');
         }
+    }
+
+    function verifyAdminPin() {
+        const pin = document.getElementById('aLoginPin').value;
+        if(pin === '202005') {
+            isAdminLoggedIn = true;
+            document.getElementById('admin2FASection').classList.add('hidden');
+            document.getElementById('aLoginPin').value = '';
+            document.getElementById('aPinError').classList.add('hidden');
+            document.getElementById('adminDashboard').classList.remove('hidden');
+            
+            updateAdminUI();
+            updateFooterCounter(); // Show counter on login
+        } else {
+            document.getElementById('aPinError').classList.remove('hidden');
+        }
+    }
+
+    function cancelAdminLogin() {
+        document.getElementById('admin2FASection').classList.add('hidden');
+        document.getElementById('aLoginPin').value = '';
+        document.getElementById('aPinError').classList.add('hidden');
+        document.getElementById('adminAuthSection').classList.remove('hidden');
     }
 
     function updateAdminUI() {
@@ -806,7 +972,11 @@
         if(presentTickets.length > 0) {
             presentListDiv.innerHTML = presentTickets.map(t => `
                 <div class="list-item">
-                    <div><strong>${t.name}</strong><br><small style="color:var(--text-muted)">${t.email}</small></div>
+                    <div>
+                        <strong>${t.name}</strong> 
+                        <span class="scanned-by-text">(Scanned by: ${t.scannedBy})</span><br>
+                        <small style="color:var(--text-muted)">${t.email}</small>
+                    </div>
                     <span class="status-badge" style="background:var(--border-color); color:var(--text-main); font-size:0.7rem">In Venue</span>
                 </div>`).join('');
         } else {
